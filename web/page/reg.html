@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script>
+        $(function () {
+
+        })
+        function commitUser() {
+            alert($("#form1").serialize())
+           $("#form1").submit();
+        }
+    </script>
+</head>
+<body>
+<h2>添加用户列表</h2>
+<form id="form1" method="post" action="add">
+<table id="tab" class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>name</th>
+        <th><input type="text" name="name"></th>
+    </tr>
+    <tr>
+        <th>pwd</th>
+        <th><input type="text" name="pwd"></th>
+    </tr>
+    <tr>
+        <th>age</th>
+        <th><input type="number" name="age"></th>
+    </tr>
+    <tr>
+        <th>sex</th>
+        <th><input type="text" name="sex"></th>
+    </tr>
+    <tr>
+        <th>tel</th>
+        <th><input type="text" name="tel"></th>
+    </tr>
+    <tr>
+        <th>email</th>
+        <th><input type="text" name="email"></th>
+    </tr>
+    <tr>
+        <th>address</th>
+        <th><input type="text" name="address"></th>
+    </tr>
+</table>
+</form>
+<input type="button" value="提交" onclick="commitUser()">
+</body>
+</html>

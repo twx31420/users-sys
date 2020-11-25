@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.nf.users.dao.UserDao">
+    <insert id="addUser" parameterType="users">
+        insert into user(name, pwd, age, sex, tel, email, address) values
+        (#{name},#{pwd},#{age},#{sex},#{tel},#{email},#{address})
+    </insert>
+<!--    分页查询,dao 中的分页参数不需要设置，由插件动态配置-->
+    <select id="listUser" resultType="users">
+        select id, name,pwd, age, sex, tel, email, address from user
+    </select>
+
+</mapper>
