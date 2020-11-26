@@ -8,6 +8,7 @@ import org.nf.mvc.view.RedirectView;
 import org.nf.mvc.view.View;
 
 public class UserServlet {
+
     @WebRequest("/page/add")
     public View addUser(Users users){
         new UserService().addUser(users);
